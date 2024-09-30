@@ -1,0 +1,30 @@
+// EDIT IT, change to your package, service and message
+syntax = "proto3";
+package api;
+
+option go_package = "./;api";
+
+// The greeting service definition.
+service UserCenterService {
+
+  rpc Login (LoginRequest) returns (User) {}
+
+}
+
+message LoginRequest {
+  string studentId = 1;
+  string password = 2;
+}
+
+message WechatRequest {
+  string studentId = 1;
+  string password = 2;
+}
+
+message User {
+  string userName = 1;
+  int64  userId= 2;
+  int32 code = 3;
+  string yxyPassword = 4;
+  string zfPassword = 5;
+}
